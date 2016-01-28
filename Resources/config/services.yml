@@ -13,10 +13,10 @@ services:
             - %cachetool.temp_dir%
             - "@?logger"
         calls:
-            - [setAdapter, [@cachetool.default_adapter]]
-            - [addProxy, [@cachetool.proxy.php]]
-            - [addProxy, [@cachetool.proxy.apc]]
-            - [addProxy, [@cachetool.proxy.opcache]]
+            - [setAdapter, ["@cachetool.default_adapter"]]
+            - [addProxy, ["@cachetool.proxy.php"]]
+            - [addProxy, ["@cachetool.proxy.apc"]]
+            - [addProxy, ["@cachetool.proxy.opcache"]]
 
     # Adapters
 
